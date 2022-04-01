@@ -21,3 +21,25 @@
 h1,h2,h3,h4,h5,p {
     font-family: "Outfit", sans-serif;
 }
+
+body {
+    max-width: max-content;
+    margin: auto;
+    background-color: var(--Verydarkblue-mainBG);
+}
+
+.container {
+    max-width: 1440px;
+    height: 100vh;
+    border: 5px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-box {
+    background-color: var(--Verydarkblue-cardBG);
+    height: 430px;
+    width: 300px;
+    border-radius: 15px;
+}
