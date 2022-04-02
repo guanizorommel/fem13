@@ -22,24 +22,48 @@ h1,h2,h3,h4,h5,p {
     font-family: "Outfit", sans-serif;
 }
 
+h1 {
+    color: var(--White);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+h2 {
+    color: var(--Softblue);
+    font-size: 1em;
+    font-weight: 400;
+}
+
 body {
-    max-width: max-content;
-    margin: auto;
+    max-width: max-content; /*This makes the body in max-width based on the content*/
+    margin: auto; /*This makes the body all of its items inside automatically centered y and x axis*/
     background-color: var(--Verydarkblue-mainBG);
 }
 
-.container {
-    max-width: 1440px;
-    height: 100vh;
-    border: 5px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+img {
+    width: 100%;
 }
 
-.card-box {
+.container {
+    max-width: 1440px; /*Add maximum width for this container*/
+    height: 100vh; /*makes the container 100% view height*/
+    border: 5px solid red;
+    display: flex; /*Make this a flex so that items inside of it can be aligned*/
+    justify-content: center; /*Positions flex items to center horizontaly ( X axis )*/
+    align-items: center; /*Positions flex items to center vertically (Y axis>*/
+}
+
+.card-box { /*This is now flex item. parent is container*/
     background-color: var(--Verydarkblue-cardBG);
     height: 430px;
     width: 300px;
     border-radius: 15px;
+    padding: 20px;
+
+    display: flex; /*Make this a flex parent. all of items inside of this will become flex-item*/
+    flex-direction: column; /*The default flex-direction is row, i changed it to column*/
+    justify-content: space-between; /*add space between flex item depending on remaing space*/
 }
+
+
+
