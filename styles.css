@@ -24,13 +24,13 @@ h1,h2,h3,h4,h5,p {
 
 h1 {
     color: var(--White);
-    font-size: 1.2em;
+    font-size: 22px;
     font-weight: 600;
 }
 
 h2 {
     color: var(--Softblue);
-    font-size: 1em;
+    font-size: 18px;
     font-weight: 400;
 }
 
@@ -38,10 +38,6 @@ body {
     max-width: max-content; /*This makes the body in max-width based on the content*/
     margin: auto; /*This makes the body all of its items inside automatically centered y and x axis*/
     background-color: var(--Verydarkblue-mainBG);
-}
-
-img {
-    width: 100%;
 }
 
 .container {
@@ -55,14 +51,38 @@ img {
 
 .card-box { /*This is now flex item. parent is container*/
     background-color: var(--Verydarkblue-cardBG);
-    height: 430px;
-    width: 300px;
+    height: 500px;
+    width: 340px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 25px;
 
     display: flex; /*Make this a flex parent. all of items inside of this will become flex-item*/
     flex-direction: column; /*The default flex-direction is row, i changed it to column*/
     justify-content: space-between; /*add space between flex item depending on remaing space*/
+}
+
+img {
+    width: 100%; /*Make sure that images has width% so that i will shrink when resized*/
+    border-radius: 5px;
+}
+
+.pricing-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-ethereum {
+    color: var(--Cyan);
+}
+
+.fa-clock {
+    color: var(--Softblue);
+}
+
+.eth-text, .days-text {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 
