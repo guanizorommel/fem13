@@ -34,6 +34,12 @@ h2 {
     font-weight: 400;
 }
 
+h3 {
+    color: var(--White);
+    font-size: 16px;
+    font-weight: 400;
+}
+
 body {
     max-width: max-content; /*This makes the body in max-width based on the content*/
     margin: auto; /*This makes the body all of its items inside automatically centered y and x axis*/
@@ -51,7 +57,7 @@ body {
 
 .card-box { /*This is now flex item. parent is container*/
     background-color: var(--Verydarkblue-cardBG);
-    height: 500px;
+    height: 550px;
     width: 340px;
     border-radius: 15px;
     padding: 25px;
@@ -62,28 +68,56 @@ body {
 }
 
 img {
-    width: 100%; /*Make sure that images has width% so that i will shrink when resized*/
+    width: 100%; /*Make sure that images has width100% so that i will shrink when resized*/
     border-radius: 5px;
+}
+
+.circle-image { /*Targets the image inside this div*/
+    width: 35px;
+    border-width: 1px; /*Thickness of border*/
+    border-style: solid; /*Style of border*/
+    border-color: var(--White); /*Color of the border*/
+    border-radius: 50%; /*Make the border to become circle*/
 }
 
 .pricing-box {
     display: flex;
     justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.pricing-box > * {
+    padding-top: 5px;
 }
 
 .fa-ethereum {
     color: var(--Cyan);
 }
 
-.fa-clock {
+.fa-clock, p {
     color: var(--Softblue);
 }
 
-.eth-text, .days-text {
+.eth-text, .days-text, p {
     font-family: "Outfit", sans-serif;
     font-size: 16px;
     font-weight: 600;
 }
 
+.user-box {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: var(--Verydarkblue-line);
 
+    padding-top: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user-box > * {
+    padding-top: 5px;
+}
 
