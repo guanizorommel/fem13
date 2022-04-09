@@ -49,7 +49,6 @@ body {
 .container {
     max-width: 1440px; /*Add maximum width for this container*/
     height: 100vh; /*makes the container 100% view height*/
-    border: 5px solid red;
     display: flex; /*Make this a flex so that items inside of it can be aligned*/
     justify-content: center; /*Positions flex items to center horizontaly ( X axis )*/
     align-items: center; /*Positions flex items to center vertically (Y axis>*/
@@ -57,19 +56,52 @@ body {
 
 .card-box { /*This is now flex item. parent is container*/
     background-color: var(--Verydarkblue-cardBG);
-    height: 550px;
-    width: 340px;
+    height: 550px; /*Sets hard height*/
+    width: 340px; /*Sets hard width*/
     border-radius: 15px;
     padding: 25px;
 
     display: flex; /*Make this a flex parent. all of items inside of this will become flex-item*/
     flex-direction: column; /*The default flex-direction is row, i changed it to column*/
-    justify-content: space-between; /*add space between flex item depending on remaing space*/
+    justify-content: space-between; /*add space between flex item depending on remaining space*/
 }
 
-img {
-    width: 100%; /*Make sure that images has width100% so that i will shrink when resized*/
-    border-radius: 5px;
+.image-container{
+    position: relative;
+    border-radius: 10px;
+}
+
+.image{
+    border-radius: 10px;
+    width: 100%;
+    display: block; /*makes the image displayed one line block*/
+    transition: .5s ease;
+}
+
+.icon-view{
+    position: absolute; /*Makes the eye icon in absolute position. meaning anywhere inside the relative image-container*/
+    top: 47%; /*adjust y -axis*/
+    left: 43%; /*adjust x - axis*/
+    visibility: hidden; /*Hides the icon */
+}
+
+.image-container:hover .image {
+    cursor: grab; /*Changes the cursor when mouse is hovered in the image-container*/
+    opacity: 0.3; /*then sets the opacity*/
+}
+  
+.image-container:hover .icon-view { 
+    visibility: inherit; /*display the icon when mouse is hovered in the image-container*/
+}
+
+.image-container:hover{
+    background-color: var(--Cyan);
+}
+
+h1:hover, h3:hover { /*Changes the text color and cursor when mouse is hovered*/
+    color: var(--Cyan);
+    transition: .5s ease;
+    cursor: grab;
 }
 
 .circle-image { /*Targets the image inside this div*/
